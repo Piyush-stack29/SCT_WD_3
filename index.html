@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="quiz-container">
+
+        <!-- Header -->
+        <div class="quiz-header">
+            <h1>Quiz Game</h1>
+            <div class="progress-info">
+                <span id="question-counter">Question 1 of 10</span>
+                <span id="score-live">Score: 0</span>
+            </div>
+            <div class="progress-bar-outer">
+                <div class="progress-bar-inner" id="progress-bar"></div>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div class="quiz-screen" id="quiz-screen">
+            <h2 class="question-text" id="question-text">Question text goes here</h2>
+            <div class="options" id="options-container"></div>
+
+            <div class="nav-buttons">
+                <button id="prev-btn" class="btn btn-secondary">⬅ Previous</button>
+                <button id="skip-btn" class="btn btn-warning">Skip</button>
+                <button id="next-btn" class="btn btn-primary">Next ➡</button>
+                <button id="submit-btn" class="btn btn-success hidden">Submit Quiz</button>
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div class="result-screen hidden" id="result-screen">
+            <h2>Quiz Completed!</h2>
+            <div class="emoji" id="result-emoji">🎉</div>
+            <p class="performance-message" id="performance-message">Great job!</p>
+
+            <div class="score-summary">
+                <div class="summary-card total">
+                    <span class="summary-number" id="total-score">0/10</span>
+                    <span class="summary-label">Total Score</span>
+                </div>
+                <div class="summary-card percentage">
+                    <span class="summary-number" id="percentage-score">0%</span>
+                    <span class="summary-label">Percentage</span>
+                </div>
+            </div>
+
+            <div class="result-dashboard">
+                <div class="result-item correct">
+                    <span class="result-count" id="correct-count">0</span>
+                    <span class="result-label">Correct</span>
+                </div>
+                <div class="result-item wrong">
+                    <span class="result-count" id="wrong-count">0</span>
+                    <span class="result-label">Wrong</span>
+                </div>
+                <div class="result-item skipped">
+                    <span class="result-count" id="skipped-count">0</span>
+                    <span class="result-label">Skipped</span>
+                </div>
+            </div>
+
+            <button id="restart-btn" class="btn btn-primary">Restart Quiz</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
